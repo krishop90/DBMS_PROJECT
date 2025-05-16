@@ -1,0 +1,96 @@
+-- 1. Basic Team Information
+SELECT Team_ID, Team_Name, Coach, Captain 
+FROM Team
+ORDER BY Team_Name;
+
+-- 2. Top Scorers in World Cup 2022
+SELECT p.Player_Name, t.Team_Name, ps.Total_Goals, ps.Total_Assists
+FROM Player_Stats ps
+JOIN Player p ON ps.Player_ID = p.Player_ID
+JOIN Team t ON p.Nationality = t.Team_Name
+ORDER BY ps.Total_Goals DESC
+LIMIT 10;
+
+-- 3. World Cup Winners History
+SELECT w.WC_ID, w.Year, w.Host_Country, 
+       t1.Team_Name AS Winner, t2.Team_Name AS Runner_Up
+FROM World_Cup w
+JOIN Team t1 ON w.Winner = t1.Team_ID
+JOIN Team t2 ON w.Runner_Up = t2.Team_ID
+ORDER BY w.Year DESC;
+
+-- 4. Matches Played in Each Stadium
+SELECT s.Stadium_Name, s.Location, s.Capacity, COUNT(m.Match_ID) AS Matches_Played
+FROM Match m
+JOIN Stadium s ON m.Stadium_ID = s.Stadium_ID
+GROUP BY s.Stadium_ID
+ORDER BY Matches_Played DESC;
+
+-- 5. Player Performance in Final Match (M001)
+SELECT p.Player_Name, t.Team_Name, 
+       pp.Goals, pp.Assists, pp.Yellow_Cards, pp.Red_Cards
+FROM Player_Performance pp
+JOIN Player p ON pp.Player_ID = p.Player_ID
+JOIN Team t ON p.Nationality = t.Team_Name
+WHERE pp.Match_ID = 'M001'
+ORDER BY pp.Goals DESC, pp.Assists DESC;
+
+-- 6. Award Winners in 2022
+SELECT a.Award_Name, p.Player_Name, t.Team_Name
+FROM Awards a
+JOIN Player p ON a.Player_ID = p.Player_ID
+JOIN Team t ON p.Nationality = t.Team_Name
+WHERE a.Year = 2022
+ORDER BY a.Award_Name;
+
+-- 7. Team Rankings for 2024
+SELECT tr.Rank, t.Team_Name, t.Coach
+FROM Team_Ranking tr
+JOIN Team t ON tr.Team_ID = t.Team_ID
+WHERE tr.Year = 2024
+ORDER BY tr.Rank;
+
+-- 8. Players by Position
+SELECT Position, COUNT(*) AS Player_Count
+FROM Player
+GROUP BY Position
+ORDER BY Player_Count DESC;
+
+-- 9. Match Results with Referee Information
+SELECT m.Match_ID, m.Date, 
+       t1.Team_Name AS Team1, t2.Team_Name AS Team2, 
+       m.Score, tw.Team_Name AS Winner,
+       r.Referee_Name, r.Nationality AS Referee_Nationality
+FROM Match m
+JOIN Team t1 ON m.Team1 = t1.Team_ID
+JOIN Team t2 ON m.Team2 = t2.Team_ID
+JOIN Team tw ON m.Winner = tw.Team_ID
+JOIN Match_Referee mr ON m.Match_ID = mr.Match_ID
+JOIN Referee r ON mr.Referee_ID = r.Referee_ID
+ORDER BY m.Date DESC;
+
+-- 10. Youngest Players in the Tournament
+SELECT Player_Name, Nationality, Position, Date_of_Birth,
+       EXTRACT(YEAR FROM AGE(CURRENT_DATE, Date_of_Birth)) AS Age
+FROM Player
+ORDER BY Date_of_Birth DESC
+LIMIT 10;
+
+-- 11. Team Performance in World Cup 2022
+SELECT t.Team_Name, 
+       COUNT(CASE WHEN m.Winner = t.Team_ID THEN 1 END) AS Wins,
+       COUNT(CASE WHEN m.Team1 = t.Team_ID OR m.Team2 = t.Team_ID THEN 1 END) AS Matches_Played
+FROM Team t
+LEFT JOIN Match m ON (m.Team1 = t.Team_ID OR m.Team2 = t.Team_ID) AND m.WC_ID = 'WC2022'
+GROUP BY t.Team_Name
+HAVING COUNT(CASE WHEN m.Team1 = t.Team_ID OR m.Team2 = t.Team_ID THEN 1 END) > 0
+ORDER BY Wins DESC;
+
+-- 12. Players with Multiple Awards
+SELECT p.Player_Name, t.Team_Name, COUNT(a.Award_ID) AS Award_Count
+FROM Awards a
+JOIN Player p ON a.Player_ID = p.Player_ID
+JOIN Team t ON p.Nationality = t.Team_Name
+GROUP BY p.Player_ID, t.Team_Name
+HAVING COUNT(a.Award_ID) > 1
+ORDER BY Award_Count DESC;

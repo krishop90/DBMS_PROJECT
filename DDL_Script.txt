@@ -1,0 +1,114 @@
+CREATE TABLE Player (
+    Player_ID VARCHAR(8),
+    Player_Name VARCHAR(50),
+    Nationality VARCHAR(30),
+    Position VARCHAR(20),
+    Date_of_Birth DATE,
+    PRIMARY KEY (Player_ID)
+);
+
+CREATE TABLE Team (
+    Team_ID VARCHAR(8),
+    Team_Name VARCHAR(50),
+    Country VARCHAR(30),
+    Coach VARCHAR(50),
+    Captain VARCHAR(50),
+    PRIMARY KEY (Team_ID)
+);
+
+CREATE TABLE Stadium (
+    Stadium_ID VARCHAR(8),
+    Stadium_Name VARCHAR(60),
+    Location VARCHAR(50),
+    Capacity INT,
+    PRIMARY KEY (Stadium_ID)
+);
+
+CREATE TABLE World_Cup (
+    WC_ID VARCHAR(8),
+    Host_Country VARCHAR(30),
+    Year INT,
+    Winner VARCHAR(8),
+    Runner_Up VARCHAR(8),
+    Golden_Boot VARCHAR(8),
+    Golden_Glove VARCHAR(8),
+    Golden_Ball VARCHAR(8),
+    PRIMARY KEY (WC_ID),
+    FOREIGN KEY (Winner) REFERENCES Team(Team_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Runner_Up) REFERENCES Team(Team_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Golden_Boot) REFERENCES Player(Player_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Golden_Glove) REFERENCES Player(Player_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Golden_Ball) REFERENCES Player(Player_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Match (
+    Match_ID VARCHAR(8),
+    WC_ID VARCHAR(8),
+    Date DATE,
+    Stadium_ID VARCHAR(8),
+    Team1 VARCHAR(8),
+    Team2 VARCHAR(8),
+    Winner VARCHAR(8),
+    Score VARCHAR(15),
+    PRIMARY KEY (Match_ID),
+    FOREIGN KEY (WC_ID) REFERENCES World_Cup(WC_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Stadium_ID) REFERENCES Stadium(Stadium_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Team1) REFERENCES Team(Team_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Team2) REFERENCES Team(Team_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Winner) REFERENCES Team(Team_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Player_Performance (
+    Player_ID VARCHAR(8),
+    Match_ID VARCHAR(8),
+    Goals INT,
+    Assists INT,
+    Yellow_Cards INT,
+    Red_Cards INT,
+    PRIMARY KEY (Player_ID, Match_ID),
+    FOREIGN KEY (Player_ID) REFERENCES Player(Player_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Match_ID) REFERENCES Match(Match_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Awards (
+    Award_ID VARCHAR(8),
+    Player_ID VARCHAR(8),
+    Year INT,
+    Award_Name VARCHAR(50),
+    PRIMARY KEY (Award_ID),
+    FOREIGN KEY (Player_ID) REFERENCES Player(Player_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Team_Ranking (
+    Year INT,
+    Team_ID VARCHAR(8),
+    Rank INT,
+    PRIMARY KEY (Year, Team_ID),
+    FOREIGN KEY (Team_ID) REFERENCES Team(Team_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Player_Stats (
+    Player_ID VARCHAR(8),
+    Total_Goals INT,
+    Total_Assists INT,
+    Total_Yellow_Cards INT,
+    Total_Red_Cards INT,
+    PRIMARY KEY (Player_ID),
+    FOREIGN KEY (Player_ID) REFERENCES Player(Player_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Referee (
+    Referee_ID VARCHAR(8),
+    Referee_Name VARCHAR(50),
+    Nationality VARCHAR(30),
+    Matches_Officiated INT,
+    PRIMARY KEY (Referee_ID)
+);
+
+CREATE TABLE Match_Referee (
+    Match_ID VARCHAR(8),
+    Referee_ID VARCHAR(8),
+    PRIMARY KEY (Match_ID, Referee_ID),
+    FOREIGN KEY (Match_ID) REFERENCES Match(Match_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Referee_ID) REFERENCES Referee(Referee_ID) ON DELETE CASCADE ON UPDATE CASCADE
+);

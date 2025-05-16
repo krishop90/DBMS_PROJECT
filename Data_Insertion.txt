@@ -1,0 +1,187 @@
+-- Team Data
+INSERT INTO Team VALUES ('ARG', 'Argentina', 'Argentina', 'Lionel Scaloni', 'Lionel Messi');
+INSERT INTO Team VALUES ('POR', 'Portugal', 'Portugal', 'Roberto Martinez', 'Cristiano Ronaldo');
+INSERT INTO Team VALUES ('CRO', 'Croatia', 'Croatia', 'Zlatko Dalić', 'Luka Modrić');
+INSERT INTO Team VALUES ('FRA', 'France', 'France', 'Didier Deschamps', 'Kylian Mbappe');
+INSERT INTO Team VALUES ('BRA', 'Brazil', 'Brazil', 'Dorival Júnior', 'Casemiro');
+INSERT INTO Team VALUES ('ENG', 'England', 'England', 'Gareth Southgate', 'Harry Kane');
+INSERT INTO Team VALUES ('BEL', 'Belgium', 'Belgium', 'Domenico Tedesco', 'Kevin De Bruyne');
+INSERT INTO Team VALUES ('GER', 'Germany', 'Germany', 'Julian Nagelsmann', 'İlkay Gündoğan');
+
+-- Player Data - Argentina
+INSERT INTO Player VALUES ('ARG001', 'Lionel Messi', 'Argentina', 'Forward', '1987-06-24');
+INSERT INTO Player VALUES ('ARG002', 'Emiliano Martinez', 'Argentina', 'Goalkeeper', '1992-09-02');
+INSERT INTO Player VALUES ('ARG003', 'Angel Di Maria', 'Argentina', 'Midfielder', '1988-02-14');
+INSERT INTO Player VALUES ('ARG004', 'Lautaro Martinez', 'Argentina', 'Forward', '1997-08-22');
+INSERT INTO Player VALUES ('ARG005', 'Rodrigo De Paul', 'Argentina', 'Midfielder', '1994-05-24');
+INSERT INTO Player VALUES ('ARG006', 'Alexis Mac Allister', 'Argentina', 'Midfielder', '1998-12-24');
+INSERT INTO Player VALUES ('ARG007', 'Nicolas Otamendi', 'Argentina', 'Defender', '1988-02-12');
+INSERT INTO Player VALUES ('ARG008', 'Cristian Romero', 'Argentina', 'Defender', '1998-04-27');
+INSERT INTO Player VALUES ('ARG009', 'Lisandro Martinez', 'Argentina', 'Defender', '1998-01-18');
+INSERT INTO Player VALUES ('ARG010', 'Nahuel Molina', 'Argentina', 'Defender', '1998-04-06');
+INSERT INTO Player VALUES ('ARG011', 'Marcos Acuna', 'Argentina', 'Defender', '1991-10-28');
+INSERT INTO Player VALUES ('ARG012', 'Nicolas Tagliafico', 'Argentina', 'Defender', '1992-08-31');
+INSERT INTO Player VALUES ('ARG013', 'Enzo Fernandez', 'Argentina', 'Midfielder', '2001-01-17');
+INSERT INTO Player VALUES ('ARG014', 'Julian Alvarez', 'Argentina', 'Forward', '2000-01-31');
+INSERT INTO Player VALUES ('ARG015', 'Paulo Dybala', 'Argentina', 'Forward', '1993-11-15');
+
+-- Player Data - Portugal
+INSERT INTO Player VALUES ('POR001', 'Cristiano Ronaldo', 'Portugal', 'Forward', '1985-02-05');
+INSERT INTO Player VALUES ('POR002', 'Diogo Costa', 'Portugal', 'Goalkeeper', '1999-09-19');
+INSERT INTO Player VALUES ('POR003', 'Pepe', 'Portugal', 'Defender', '1983-02-26');
+INSERT INTO Player VALUES ('POR004', 'Ruben Dias', 'Portugal', 'Defender', '1997-05-14');
+INSERT INTO Player VALUES ('POR005', 'Joao Cancelo', 'Portugal', 'Defender', '1994-05-27');
+INSERT INTO Player VALUES ('POR006', 'Nuno Mendes', 'Portugal', 'Defender', '2002-06-19');
+INSERT INTO Player VALUES ('POR007', 'Bruno Fernandes', 'Portugal', 'Midfielder', '1994-09-08');
+INSERT INTO Player VALUES ('POR008', 'Bernardo Silva', 'Portugal', 'Midfielder', '1994-08-10');
+INSERT INTO Player VALUES ('POR009', 'Joao Felix', 'Portugal', 'Forward', '1999-11-10');
+INSERT INTO Player VALUES ('POR010', 'Rafael Leao', 'Portugal', 'Forward', '1999-06-10');
+INSERT INTO Player VALUES ('POR011', 'Diogo Jota', 'Portugal', 'Forward', '1996-12-04');
+INSERT INTO Player VALUES ('POR012', 'Ruben Neves', 'Portugal', 'Midfielder', '1997-03-13');
+INSERT INTO Player VALUES ('POR013', 'Vitinha', 'Portugal', 'Midfielder', '2000-02-13');
+INSERT INTO Player VALUES ('POR014', 'Pedro Neto', 'Portugal', 'Forward', '2000-03-09');
+INSERT INTO Player VALUES ('POR015', 'Goncalo Ramos', 'Portugal', 'Forward', '2001-06-20');
+
+-- Player Data - Croatia
+INSERT INTO Player VALUES ('CRO001', 'Luka Modrić', 'Croatia', 'Midfielder', '1985-09-09');
+INSERT INTO Player VALUES ('CRO002', 'Dominik Livaković', 'Croatia', 'Goalkeeper', '1995-01-09');
+INSERT INTO Player VALUES ('CRO003', 'Ivan Perišić', 'Croatia', 'Midfielder', '1989-02-02');
+INSERT INTO Player VALUES ('CRO004', 'Mateo Kovačić', 'Croatia', 'Midfielder', '1994-05-06');
+INSERT INTO Player VALUES ('CRO005', 'Marcelo Brozović', 'Croatia', 'Midfielder', '1992-11-16');
+INSERT INTO Player VALUES ('CRO006', 'Andrej Kramarić', 'Croatia', 'Forward', '1991-06-19');
+INSERT INTO Player VALUES ('CRO007', 'Joško Gvardiol', 'Croatia', 'Defender', '2002-01-23');
+INSERT INTO Player VALUES ('CRO008', 'Borna Sosa', 'Croatia', 'Defender', '1998-01-21');
+INSERT INTO Player VALUES ('CRO009', 'Dejan Lovren', 'Croatia', 'Defender', '1989-07-05');
+INSERT INTO Player VALUES ('CRO010', 'Josip Juranović', 'Croatia', 'Defender', '1995-08-16');
+INSERT INTO Player VALUES ('CRO011', 'Domagoj Vida', 'Croatia', 'Defender', '1989-04-29');
+INSERT INTO Player VALUES ('CRO012', 'Mario Pašalić', 'Croatia', 'Midfielder', '1995-02-09');
+INSERT INTO Player VALUES ('CRO013', 'Nikola Vlašić', 'Croatia', 'Midfielder', '1997-10-04');
+INSERT INTO Player VALUES ('CRO014', 'Bruno Petković', 'Croatia', 'Forward', '1994-09-16');
+INSERT INTO Player VALUES ('CRO015', 'Mislav Oršić', 'Croatia', 'Forward', '1992-12-29');
+
+-- Player Data - France
+INSERT INTO Player VALUES ('FRA001', 'Kylian Mbappe', 'France', 'Forward', '1998-12-20');
+INSERT INTO Player VALUES ('FRA002', 'Hugo Lloris', 'France', 'Goalkeeper', '1986-12-26');
+INSERT INTO Player VALUES ('FRA003', 'Antoine Griezmann', 'France', 'Forward', '1991-03-21');
+INSERT INTO Player VALUES ('FRA004', 'NGolo Kante', 'France', 'Midfielder', '1991-03-29');
+INSERT INTO Player VALUES ('FRA005', 'Paul Pogba', 'France', 'Midfielder', '1993-03-15');
+INSERT INTO Player VALUES ('FRA006', 'Raphael Varane', 'France', 'Defender', '1993-04-25');
+INSERT INTO Player VALUES ('FRA007', 'Aurelien Tchouameni', 'France', 'Midfielder', '2000-01-27');
+INSERT INTO Player VALUES ('FRA008', 'Theo Hernandez', 'France', 'Defender', '1997-10-06');
+INSERT INTO Player VALUES ('FRA009', 'Jules Kounde', 'France', 'Defender', '1998-11-12');
+INSERT INTO Player VALUES ('FRA010', 'Olivier Giroud', 'France', 'Forward', '1986-09-30');
+INSERT INTO Player VALUES ('FRA011', 'Ousmane Dembele', 'France', 'Forward', '1997-05-15');
+INSERT INTO Player VALUES ('FRA012', 'Eduardo Camavinga', 'France', 'Midfielder', '2002-11-10');
+INSERT INTO Player VALUES ('FRA013', 'Benjamin Pavard', 'France', 'Defender', '1996-03-28');
+INSERT INTO Player VALUES ('FRA014', 'Mike Maignan', 'France', 'Goalkeeper', '1995-07-03');
+INSERT INTO Player VALUES ('FRA015', 'Dayot Upamecano', 'France', 'Defender', '1998-10-27');
+
+-- Player Data - Brazil
+INSERT INTO Player VALUES ('BRA001', 'Neymar Jr', 'Brazil', 'Forward', '1992-02-05');
+INSERT INTO Player VALUES ('BRA002', 'Alisson Becker', 'Brazil', 'Goalkeeper', '1992-10-02');
+INSERT INTO Player VALUES ('BRA003', 'Vinicius Jr', 'Brazil', 'Forward', '2000-07-12');
+INSERT INTO Player VALUES ('BRA004', 'Marquinhos', 'Brazil', 'Defender', '1994-05-14');
+INSERT INTO Player VALUES ('BRA005', 'Casemiro', 'Brazil', 'Midfielder', '1992-02-23');
+INSERT INTO Player VALUES ('BRA006', 'Thiago Silva', 'Brazil', 'Defender', '1984-09-22');
+INSERT INTO Player VALUES ('BRA007', 'Rodrygo', 'Brazil', 'Forward', '2001-01-09');
+INSERT INTO Player VALUES ('BRA008', 'Bruno Guimaraes', 'Brazil', 'Midfielder', '1997-11-16');
+INSERT INTO Player VALUES ('BRA009', 'Gabriel Jesus', 'Brazil', 'Forward', '1997-04-03');
+INSERT INTO Player VALUES ('BRA010', 'Raphinha', 'Brazil', 'Forward', '1996-12-14');
+INSERT INTO Player VALUES ('BRA011', 'Danilo', 'Brazil', 'Defender', '1991-07-15');
+INSERT INTO Player VALUES ('BRA012', 'Ederson', 'Brazil', 'Goalkeeper', '1993-08-17');
+INSERT INTO Player VALUES ('BRA013', 'Lucas Paqueta', 'Brazil', 'Midfielder', '1997-08-27');
+INSERT INTO Player VALUES ('BRA014', 'Antony', 'Brazil', 'Forward', '2000-02-24');
+INSERT INTO Player VALUES ('BRA015', 'Richarlison', 'Brazil', 'Forward', '1997-05-10');
+
+-- Player Data - England
+INSERT INTO Player VALUES ('ENG001', 'Harry Kane', 'England', 'Forward', '1993-07-28');
+INSERT INTO Player VALUES ('ENG002', 'Jordan Pickford', 'England', 'Goalkeeper', '1994-03-07');
+INSERT INTO Player VALUES ('ENG003', 'Jude Bellingham', 'England', 'Midfielder', '2003-06-29');
+INSERT INTO Player VALUES ('ENG004', 'Declan Rice', 'England', 'Midfielder', '1999-01-14');
+INSERT INTO Player VALUES ('ENG005', 'Phil Foden', 'England', 'Midfielder', '2000-05-28');
+INSERT INTO Player VALUES ('ENG006', 'Bukayo Saka', 'England', 'Forward', '2001-09-05');
+INSERT INTO Player VALUES ('ENG007', 'John Stones', 'England', 'Defender', '1994-05-28');
+INSERT INTO Player VALUES ('ENG008', 'Kyle Walker', 'England', 'Defender', '1990-05-28');
+INSERT INTO Player VALUES ('ENG009', 'Luke Shaw', 'England', 'Defender', '1995-07-12');
+INSERT INTO Player VALUES ('ENG010', 'Jack Grealish', 'England', 'Midfielder', '1995-09-10');
+INSERT INTO Player VALUES ('ENG011', 'Trent Alexander-Arnold', 'England', 'Defender', '1998-10-07');
+INSERT INTO Player VALUES ('ENG012', 'Mason Mount', 'England', 'Midfielder', '1999-01-10');
+INSERT INTO Player VALUES ('ENG013', 'Marcus Rashford', 'England', 'Forward', '1997-10-31');
+INSERT INTO Player VALUES ('ENG014', 'Kieran Trippier', 'England', 'Defender', '1990-09-19');
+INSERT INTO Player VALUES ('ENG015', 'Raheem Sterling', 'England', 'Forward', '1994-12-08');
+
+-- Stadium Data
+INSERT INTO Stadium VALUES ('STD001', 'Lusail Stadium', 'Lusail, Qatar', 80000);
+INSERT INTO Stadium VALUES ('STD002', 'Al Bayt Stadium', 'Al Khor, Qatar', 60000);
+INSERT INTO Stadium VALUES ('STD003', 'Education City Stadium', 'Al Rayyan, Qatar', 45350);
+INSERT INTO Stadium VALUES ('STD004', 'Ahmad Bin Ali Stadium', 'Al Rayyan, Qatar', 44740);
+INSERT INTO Stadium VALUES ('STD005', 'Khalifa International Stadium', 'Doha, Qatar', 45416);
+INSERT INTO Stadium VALUES ('STD006', 'Al Thumama Stadium', 'Doha, Qatar', 40000);
+INSERT INTO Stadium VALUES ('STD007', 'Stadium 974', 'Doha, Qatar', 40000);
+INSERT INTO Stadium VALUES ('STD008', 'Al Janoub Stadium', 'Al Wakrah, Qatar', 40000);
+
+-- World Cup Data
+INSERT INTO World_Cup VALUES ('WC2022', 'Qatar', 2022, 'ARG', 'FRA', 'ARG001', 'ARG002', 'ARG001');
+INSERT INTO World_Cup VALUES ('WC2018', 'Russia', 2018, 'FRA', 'CRO', 'ENG001', 'BEL001', 'CRO001');
+INSERT INTO World_Cup VALUES ('WC2014', 'Brazil', 2014, 'GER', 'ARG', 'COL001', 'GER001', 'ARG001');
+INSERT INTO World_Cup VALUES ('WC2010', 'South Africa', 2010, 'ESP', 'NED', 'GER001', 'ESP001', 'URU001');
+
+-- Match Data for World Cup 2022 (Sample matches)
+INSERT INTO Match VALUES ('M001', 'WC2022', '2022-12-18', 'STD001', 'ARG', 'FRA', 'ARG', '3-3 (4-2 pen)');
+INSERT INTO Match VALUES ('M002', 'WC2022', '2022-12-14', 'STD002', 'FRA', 'MAR', 'FRA', '2-0');
+INSERT INTO Match VALUES ('M003', 'WC2022', '2022-12-13', 'STD001', 'ARG', 'CRO', 'ARG', '3-0');
+INSERT INTO Match VALUES ('M004', 'WC2022', '2022-12-10', 'STD002', 'ENG', 'FRA', 'FRA', '1-2');
+INSERT INTO Match VALUES ('M005', 'WC2022', '2022-12-09', 'STD001', 'CRO', 'BRA', 'CRO', '1-1 (4-2 pen)');
+INSERT INTO Match VALUES ('M006', 'WC2022', '2022-12-09', 'STD006', 'ARG', 'NED', 'ARG', '2-2 (4-3 pen)');
+INSERT INTO Match VALUES ('M007', 'WC2022', '2022-12-06', 'STD001', 'POR', 'SUI', 'POR', '6-1');
+INSERT INTO Match VALUES ('M008', 'WC2022', '2022-12-05', 'STD003', 'BRA', 'KOR', 'BRA', '4-1');
+
+-- Player Performance Data for Final Match (M001)
+INSERT INTO Player_Performance VALUES ('ARG001', 'M001', 2, 0, 1, 0); -- Messi scored 2 goals
+INSERT INTO Player_Performance VALUES ('ARG004', 'M001', 1, 0, 0, 0); -- Lautaro Martinez scored 1 goal
+INSERT INTO Player_Performance VALUES ('ARG002', 'M001', 0, 0, 0, 0); -- Goalkeeper Emiliano Martinez
+INSERT INTO Player_Performance VALUES ('FRA001', 'M001', 3, 0, 0, 0); -- Mbappe scored 3 goals
+INSERT INTO Player_Performance VALUES ('FRA003', 'M001', 0, 1, 0, 0); -- Griezmann got 1 assist
+INSERT INTO Player_Performance VALUES ('FRA002', 'M001', 0, 0, 0, 0); -- Goalkeeper Lloris
+
+-- Player_Stats data (Totals from World Cup 2022)
+INSERT INTO Player_Stats VALUES ('ARG001', 7, 3, 1, 0); -- Messi
+INSERT INTO Player_Stats VALUES ('ARG002', 0, 0, 0, 0); -- Goalkeeper Martinez
+INSERT INTO Player_Stats VALUES ('ARG003', 1, 1, 0, 0); -- Di Maria
+INSERT INTO Player_Stats VALUES ('FRA001', 8, 0, 0, 0); -- Mbappe
+INSERT INTO Player_Stats VALUES ('FRA003', 0, 3, 0, 0); -- Griezmann
+INSERT INTO Player_Stats VALUES ('CRO001', 1, 2, 0, 0); -- Modric
+INSERT INTO Player_Stats VALUES ('POR001', 1, 0, 1, 0); -- Ronaldo
+INSERT INTO Player_Stats VALUES ('BRA001', 2, 1, 0, 0); -- Neymar
+
+-- Award Data
+INSERT INTO Awards VALUES ('AWD001', 'ARG001', 2022, 'FIFA World Cup Golden Ball');
+INSERT INTO Awards VALUES ('AWD002', 'FRA001', 2022, 'FIFA World Cup Golden Boot');
+INSERT INTO Awards VALUES ('AWD003', 'ARG002', 2022, 'FIFA World Cup Golden Glove');
+INSERT INTO Awards VALUES ('AWD004', 'CRO001', 2018, 'FIFA World Cup Golden Ball');
+INSERT INTO Awards VALUES ('AWD005', 'ENG001', 2018, 'FIFA World Cup Golden Boot');
+INSERT INTO Awards VALUES ('AWD006', 'ARG001', 2014, 'FIFA World Cup Golden Ball');
+
+-- Team Ranking Data
+INSERT INTO Team_Ranking VALUES (2024, 'ARG', 1);
+INSERT INTO Team_Ranking VALUES (2024, 'FRA', 2);
+INSERT INTO Team_Ranking VALUES (2024, 'BEL', 3);
+INSERT INTO Team_Ranking VALUES (2024, 'BRA', 4);
+INSERT INTO Team_Ranking VALUES (2024, 'ENG', 5);
+INSERT INTO Team_Ranking VALUES (2024, 'CRO', 6);
+INSERT INTO Team_Ranking VALUES (2024, 'POR', 7);
+INSERT INTO Team_Ranking VALUES (2024, 'GER', 8);
+
+-- Referee Data
+INSERT INTO Referee VALUES ('REF001', 'Szymon Marciniak', 'Poland', 5);
+INSERT INTO Referee VALUES ('REF002', 'Cesar Ramos', 'Mexico', 4);
+INSERT INTO Referee VALUES ('REF003', 'Facundo Tello', 'Argentina', 4);
+INSERT INTO Referee VALUES ('REF004', 'Daniele Orsato', 'Italy', 5);
+INSERT INTO Referee VALUES ('REF005', 'Anthony Taylor', 'England', 4);
+
+-- Match_Referee Data
+INSERT INTO Match_Referee VALUES ('M001', 'REF001'); -- Final match referee
+INSERT INTO Match_Referee VALUES ('M002', 'REF002');
+INSERT INTO Match_Referee VALUES ('M003', 'REF003');
+INSERT INTO Match_Referee VALUES ('M004', 'REF004');
+INSERT INTO Match_Referee VALUES ('M005', 'REF005');
